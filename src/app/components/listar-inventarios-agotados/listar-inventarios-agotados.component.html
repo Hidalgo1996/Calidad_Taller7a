@@ -1,1 +1,48 @@
-<p>listar-inventarios-agotados works!</p>
+<div class="listar_inv_agotado">
+    <!-- Listados de Inventarios -->
+    <h2>Listados de Inventarios</h2>
+    <h3>Productos Agotados o Próximos a Agotar</h3>
+    <table id="inventarioAgotado" class="table" style="text-align: center;">
+        <thead>
+            <tr>
+                <th>Categoría</th>
+                <th>Nombre</th>
+                <th>Marca</th>
+                <th>Peso</th>
+                <th>Precio de Compra</th>
+                <th>Precio de Venta</th>
+                <th>Cantidad en Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Filas de productos agotados o próximos a agotar obtenidos de la base de datos -->
+            <tr>
+                <th scope="row">Enlatado</th>
+                <td>Atún</td>
+                <td>El cocinero</td>
+                <td>175 g</td>
+                <td>1.20</td>
+                <td>1.50</td>
+                <td>45</td>
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">Enlatado</th>
+                <td>Sardina</td>
+                <td>La favorita</td>
+                <td>300 g</td>
+                <td>1.20</td>
+                <td>2.00</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <th scope="row">Frutas</th>
+                <td>Manzana</td>
+                <td>Frutitas S.A</td>
+                <td>50 g</td>
+                <td>0.15</td>
+                <td>0.50</td>
+                <td>50</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

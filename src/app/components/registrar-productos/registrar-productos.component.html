@@ -1,1 +1,41 @@
-<p>registrar-productos works!</p>
+<!-- Registro de productos -->
+<div class="registro_pro">
+    <h2>Registro de Productos</h2><br>
+    <form id="productoForm">
+        <div class="form-row">
+            <div class="form-group col-md-5">
+                <label for="categoriaProducto">Categoría:</label>
+                <select class="form-control" id="categoriaProducto">
+                    <option value="frutas">Frutas</option>
+                    <option value="verduras">Verduras</option>
+                    <option value="enlatados">Enlatados</option>
+                </select>
+            </div>
+        </div><br>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre del producto">
+            </div><br>
+            <div class="form-group col-md-4">
+                <label for="marca">Marca:</label>
+                <input type="text" class="form-control" id="marca" placeholder="Ingrese la marca del producto">
+            </div><br>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="peso">Peso:</label>
+                <input type="text" class="form-control" id="peso" placeholder="Ingrese el peso del producto">
+            </div><br>
+            <div class="form-group col-md-4">
+                <label for="precioCompra">Precio de Compra:</label>
+                <input type="text" class="form-control" id="precioCompra" placeholder="Ingrese el precio de compra">
+            </div><br>
+            <div class="form-group col-md-4">
+                <label for="precioVenta">Precio de Venta:</label>
+                <input type="text" class="form-control" id="precioVenta" placeholder="Ingrese el precio de venta">
+            </div><br>
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar Producto</button>
+    </form>
+</div>
