@@ -1,25 +1,30 @@
-<div class="registro_comp">
-    <!-- Registro de compras -->
-    <h2>Registro de Compras</h2>
-    <form id="compraForm">
-        <div class="form-group">
-            <label for="productoCompra">Producto:</label>
-            <select class="form-control" id="productoCompra">
-                <!-- Opciones de productos obtenidas de la base de datos -->
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="cantidadCompra">Cantidad:</label>
-            <input type="number" class="form-control" id="cantidadCompra" placeholder="Ingrese la cantidad">
-        </div>
-        <div class="row">
-            <label for="cantidadCompra">Total: </label>
-            <div class="col-sm-2">
-                <input type="text" class="form-control" id="cantidadCompra" readonly>
+<div class="container" style="justify-content: center; width: 50%; padding: 3%;">
+    <div class="row border-0 shadow-lg">
+        <h2>Registro de Compras</h2><br>
+        <form id="compraForm">
+            <div class="form-group">
+                <label for="productoCompra">Producto:</label>
+                <select class="form-control" id="productoCompra">
+                    <!-- Opciones de productos obtenidas de la base de datos -->
+                </select>
             </div>
-        </div><br>
-        <div>
-            <button type="submit" class="btn btn-primary">Registrar Compra</button>
-        </div>
-    </form>
+            <div class="form-group" style="margin-top: 16px;">
+                <label for="cantidadCompra">Proveedor:</label>
+                <input type="number" class="form-control" id="proveedor" placeholder="Ingrese el proveedor">
+            </div><br>
+            <div class="form-group">
+                <label for="cantidadCompra">Cantidad:</label>
+                <input type="number" class="form-control" id="cantidadCompra" placeholder="Ingrese la cantidad">
+            </div><br>
+            <div class="row">
+                <label for="cantidadCompra">Total: </label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" id="cantidadCompra" readonly>
+                </div>
+            </div><br>
+            <div>
+                <button type="submit" class="btn btn-primary">Registrar Compra</button>
+            </div><br>
+        </form>
+    </div>
 </div>

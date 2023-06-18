@@ -1,41 +1,49 @@
 <!-- Registro de productos -->
-<div class="registro_pro">
-    <h2>Registro de Productos</h2><br>
-    <form id="productoForm">
-        <div class="form-row">
-            <div class="form-group col-md-5">
-                <label for="categoriaProducto">Categoría:</label>
-                <select class="form-control" id="categoriaProducto">
-                    <option value="frutas">Frutas</option>
-                    <option value="verduras">Verduras</option>
-                    <option value="enlatados">Enlatados</option>
-                </select>
+<div class="container" style="justify-content: center; width: 70%; padding: 5%;">
+    <div class="row border-0 shadow-lg">
+        <h2>Registro de Productos</h2><br>
+        <form>
+            <div class="row">
+                <div class="col" style="margin: 1%;">
+                    <div class="form-group">
+                        <label for="categoriaProducto"> Selección:</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Categoría</option>
+                            <option value="1">Frutas</option>
+                            <option value="2">Verduras</option>
+                            <option value="3">Enlatados</option>
+                        </select>
+                    </div><br>
+                    <div class="form-group col">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre"
+                            placeholder="Ingrese el nombre del producto">
+                    </div><br>
+                    <div class="form-group col">
+                        <label for="marca">Marca:</label>
+                        <input type="text" class="form-control" id="marca" placeholder="Ingrese la marca del producto">
+                    </div>
+                </div>
+                <div class="col" style="margin: 1%;">
+                    <div class="form-group col">
+                        <label for="peso">Peso:</label>
+                        <input type="text" class="form-control" id="peso" placeholder="Ingrese el peso del producto">
+                    </div><br>
+                    <div class="form-group col">
+                        <label for="precioCompra">Precio de Compra ($):</label>
+                        <input type="text" class="form-control" id="precioCompra"
+                            placeholder="Ingrese el precio de compra">
+                    </div><br>
+                    <div class="form-group col">
+                        <label for="precioVenta">Precio de Venta ($):</label>
+                        <input type="text" class="form-control" id="precioVenta"
+                            placeholder="Ingrese el precio de venta">
+                    </div><br>
+                </div>
             </div>
-        </div><br>
-        <div class="form-row">
-            <div class="form-group col-md-4">
-                <label for="nombre">Nombre:</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre del producto">
-            </div><br>
-            <div class="form-group col-md-4">
-                <label for="marca">Marca:</label>
-                <input type="text" class="form-control" id="marca" placeholder="Ingrese la marca del producto">
-            </div><br>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-4">
-                <label for="peso">Peso:</label>
-                <input type="text" class="form-control" id="peso" placeholder="Ingrese el peso del producto">
-            </div><br>
-            <div class="form-group col-md-4">
-                <label for="precioCompra">Precio de Compra:</label>
-                <input type="text" class="form-control" id="precioCompra" placeholder="Ingrese el precio de compra">
-            </div><br>
-            <div class="form-group col-md-4">
-                <label for="precioVenta">Precio de Venta:</label>
-                <input type="text" class="form-control" id="precioVenta" placeholder="Ingrese el precio de venta">
-            </div><br>
-        </div>
-        <button type="submit" class="btn btn-primary">Agregar Producto</button>
-    </form>
+            <div style="text-align: center;">
+                <button type="submit" class="btn btn-primary">Agregar Producto</button><br><br>
+            </div>
+        </form>
+    </div>
 </div>
