@@ -5,7 +5,7 @@ import { FormGroup } from '@angular/forms';
 @Injectable({
   providedIn: 'root'
 })
-export class MaestroArregloService {
+export class Contienecategoria {
   form!: FormGroup;
   constructor() { }
 

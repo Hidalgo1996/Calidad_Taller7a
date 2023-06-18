@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Categoria } from 'src/app/Models/Categoria';
-import { MaestroArregloService } from 'src/app/Servicios/Contiene-categoria';
+import { Contienecategoria } from 'src/app/Servicios/Contiene-categoria';
 
 @Component({
   selector: 'app-registrar-categorias',
@@ -13,7 +13,7 @@ export class RegistrarCategoriasComponent implements OnInit {
   categoria = "";
   listCategoria: Categoria[] = [];
 
-  constructor(private recibeCategoriaServices: MaestroArregloService) {}
+  constructor(private recibeCategoriaServices: Contienecategoria) {}
 
   ngOnInit(): void {
     this.form = new FormGroup({

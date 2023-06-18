@@ -13,7 +13,7 @@ import { RegistrarCategoriasComponent } from './components/registrar-categorias/
 import { RegistrarComprasComponent } from './components/registrar-compras/registrar-compras.component';
 import { RegistrarProductosComponent } from './components/registrar-productos/registrar-productos.component';
 import { RegistrarVentasComponent } from './components/registrar-ventas/registrar-ventas.component';
-import { MaestroArregloService } from './Servicios/Contiene-categoria';
+import { Contienecategoria } from './Servicios/Contiene-categoria';
 
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -38,7 +38,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [MaestroArregloService, MaestroArregloService],
+  providers: [Contienecategoria],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
