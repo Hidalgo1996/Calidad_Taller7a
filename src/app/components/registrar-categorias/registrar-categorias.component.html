@@ -7,15 +7,16 @@
             <div class="card-body">
               <div>
                 <h2 class="text-center">Registro de Categorías</h2>
-                <form id="categoriaForm">
+                <form [formGroup]="form" (ngSubmit)="agregarEmpleado()">
                   <div class="form-group">
                     <label for="categoria">Categoría:</label>
-                    <input type="text" class="form-control" id="categoria" placeholder="Ingrese la categoría">
-                  </div><br>
+                    <input type="text" formControlName="categoria" class="form-control" id="categoria" placeholder="Ingrese la categoría">
+                  </div>
+                  <br>
                   <div style="text-align: center;">
                     <button type="submit" class="btn btn-primary">Agregar Categoría</button>
                   </div>
-                </form>
+                </form>                
               </div>
             </div>
           </div>

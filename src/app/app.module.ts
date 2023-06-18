@@ -13,6 +13,10 @@ import { RegistrarCategoriasComponent } from './components/registrar-categorias/
 import { RegistrarComprasComponent } from './components/registrar-compras/registrar-compras.component';
 import { RegistrarProductosComponent } from './components/registrar-productos/registrar-productos.component';
 import { RegistrarVentasComponent } from './components/registrar-ventas/registrar-ventas.component';
+import { MaestroArregloService } from './Servicios/Contiene-categoria';
+
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,9 +34,11 @@ import { RegistrarVentasComponent } from './components/registrar-ventas/registra
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [MaestroArregloService, MaestroArregloService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
