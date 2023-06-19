@@ -1,30 +1,40 @@
-<div class="container" style="justify-content: center; width: 50%; padding: 3%;">
+<div class="container" style="justify-content: center; width: 50%; padding: 5%;">
     <div class="row border-0 shadow-lg">
-        <h2>Registro de Compras</h2><br>
-        <form id="compraForm">
-            <div class="form-group">
-                <label for="productoCompra">Producto:</label>
-                <select class="form-control" id="productoCompra">
-                    <!-- Opciones de productos obtenidas de la base de datos -->
-                </select>
-            </div>
-            <div class="form-group" style="margin-top: 16px;">
-                <label for="cantidadCompra">Proveedor:</label>
-                <input type="number" class="form-control" id="proveedor" placeholder="Ingrese el proveedor">
-            </div><br>
-            <div class="form-group">
-                <label for="cantidadCompra">Cantidad:</label>
-                <input type="number" class="form-control" id="cantidadCompra" placeholder="Ingrese la cantidad">
-            </div><br>
-            <div class="row">
-                <label for="cantidadCompra">Total: </label>
-                <div class="col-sm-2">
-                    <input type="text" class="form-control" id="cantidadCompra" readonly>
-                </div>
-            </div><br>
-            <div>
-                <button type="submit" class="btn btn-primary">Registrar Compra</button>
-            </div><br>
-        </form>
+      <h2>Registro de Compras </h2><br>
+      <h5>Precio en el que compramos (entrada)</h5><br>
+      <form [formGroup]="form">
+        <div class="form-group">
+          <label for="categoriaProducto">Seleccionar Categoría:</label>
+          <select class="form-select" aria-label="Default select example" formControlName="categoria" (change)="filtrarProductosPorCategoria($event)">
+            <option value="">Seleccionar</option>
+            <option *ngFor="let categoria of categorias" [value]="categoria.categoria_nombre">{{ categoria.categoria_nombre }}</option>
+          </select>
+        </div><br>
+        <div class="form-group">
+          <label for="categoriaProducto">Seleccionar Producto:</label>
+          <select class="form-select" aria-label="Default select example" formControlName="producto">
+            <option value="">Seleccionar</option>
+            <option *ngFor="let producto of productosFiltrados" [value]="producto.nombre_producto">{{ producto.nombre_producto }}</option>
+          </select>
+        </div><br>
+        <div class="form-group">
+          <label for="categoria"> Proveedor:</label>
+          <input type="text" formControlName="proveedor" class="form-control" id="proveedor" placeholder="Ingrese el nombre del proveedor">
+        </div><br>
+        <div class="form-group">
+          <label for="cantidadVenta">Cantidad:</label>
+          <input type="number" class="form-control" id="cantidadVenta" placeholder="Ingrese la cantidad" formControlName="cantidad" (input)="calcularPrecioTotal()">
+        </div><br>
+        <div class="row">
+          <label for="cantidadCompra">Total ($): </label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="cantidadCompra" readonly formControlName="cantidadCompra">
+          </div>
+        </div><br>
+        <div style="text-align: center;">
+          <button type="submit" class="btn btn-primary">Registrar Venta</button>
+        </div><br>
+      </form>
     </div>
-</div>
+  </div>
+  

@@ -23,7 +23,7 @@ export class RegistrarVentasComponent implements OnInit{
   productos: Producto[] = [];
   productosFiltrados: Producto[] = [];
     
-  //Servicio de llamado
+  //Servicio
   constructor(private recibeCategoriaServices: Contienecategoria, private reciveProductoServices: ContieneProductos) {}
 
   ngOnInit(): void {
