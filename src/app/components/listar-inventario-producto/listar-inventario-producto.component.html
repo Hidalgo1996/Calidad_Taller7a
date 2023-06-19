@@ -5,6 +5,7 @@
     <table id="inventarioPorProducto" class="table table-striped" style="text-align: center;">
       <thead class="table-dark">
         <tr>
+          <th>#</th>
           <th>Categoría</th>
           <th>Nombre</th>
           <th>Marca</th>
@@ -15,35 +16,16 @@
         </tr>
       </thead>
       <tbody>
-        <!-- Filas de productos obtenidos de la base de datos -->
-        <tr>
-          <th scope="row">Enlatado</th>
-          <td>Atún</td>
-          <td>El cocinero</td>
-          <td>175 g</td>
-          <td>1.20</td>
-          <td>1.50</td>
-          <td>45</td>
-      </tr>
-      <tr>
-          <th scope="row">Enlatado</th>
-          <td>Sardina</td>
-          <td>La favorita</td>
-          <td>300 g</td>
-          <td>1.20</td>
-          <td>2.00</td>
-          <td>5</td>
-      </tr>
-      <tr>
-          <th scope="row">Frutas</th>
-          <td>Manzana</td>
-          <td>Frutitas S.A</td>
-          <td>50 g</td>
-          <td>0.15</td>
-          <td>0.50</td>
-          <td>50</td>
-      </tr>
+        <tr *ngFor="let producto of productos let i=index">
+          <th>{{ i + 1 }}</th>
+          <th scope="row">{{ producto.categoria }}</th>
+          <td>{{ producto.nombre_producto }}</td>
+          <td>{{ producto.nombre_marca }}</td>
+          <td>{{ producto.peso }}</td>
+          <td>{{ producto.precio_compra }}</td>
+          <td>{{ producto.precio_venta }}</td>
+          <td>{{ producto.cantidad_stock }}</td>
+        </tr>
       </tbody>
     </table>
-
 </div>
