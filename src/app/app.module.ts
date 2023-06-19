@@ -16,7 +16,7 @@ import { RegistrarVentasComponent } from './components/registrar-ventas/registra
 
 //SERVICIOS
 import { Contienecategoria } from './Servicios/Contiene-categoria';
-import { ContieneProductos } from './Servicios/contiene-productos'; 
+import { ContieneProductos } from './Servicios/Contiene-productos'; 
 
 //FORMULARIOS
 import { FormsModule } from '@angular/forms';
