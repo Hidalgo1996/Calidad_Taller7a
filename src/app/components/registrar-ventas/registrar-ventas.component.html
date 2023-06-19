@@ -3,12 +3,17 @@
         <h2>Registro de Ventas</h2><br>
         <form id="ventaForm">
             <div class="form-group">
-                <label for="categoriaProducto"> Selecciona:</label>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Categoría</option>
-                    <option value="1">Frutas</option>
-                    <option value="2">Verduras</option>
-                    <option value="3">Enlatados</option>
+                <label for="categoriaProducto">Seleccionar Categoría:</label>
+                <select class="form-select" aria-label="Default select example" formControlName="categoria">
+                    <option value="">Seleccionar</option>
+                    <option *ngFor="let categoria of categorias" [value]="categoria.categoria_nombre">{{ categoria.categoria_nombre }}</option>
+                </select>
+            </div><br>
+            <div class="form-group">
+                <label for="categoriaProducto">Seleccionar Producto:</label>
+                <select class="form-select" aria-label="Default select example" formControlName="categoria">
+                    <option value="">Seleccionar</option>
+                    <option *ngFor="let categoria of productos" [value]="categoria.nombre_producto">{{ categoria.nombre_producto }}</option>
                 </select>
             </div><br>
             <div class="form-group">
