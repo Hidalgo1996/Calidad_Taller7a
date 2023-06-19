@@ -13,8 +13,12 @@ import { RegistrarCategoriasComponent } from './components/registrar-categorias/
 import { RegistrarComprasComponent } from './components/registrar-compras/registrar-compras.component';
 import { RegistrarProductosComponent } from './components/registrar-productos/registrar-productos.component';
 import { RegistrarVentasComponent } from './components/registrar-ventas/registrar-ventas.component';
-import { Contienecategoria } from './Servicios/Contiene-categoria';
 
+//SERVICIOS
+import { Contienecategoria } from './Servicios/Contiene-categoria';
+import { ContieneProductos } from './Servicios/contiene-productos'; 
+
+//FORMULARIOS
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -38,7 +42,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [Contienecategoria],
+  providers: [Contienecategoria, ContieneProductos],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

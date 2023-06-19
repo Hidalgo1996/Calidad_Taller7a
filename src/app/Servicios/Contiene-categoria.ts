@@ -9,7 +9,7 @@ export class Contienecategoria {
   form!: FormGroup;
   constructor() { }
 
-  listCategoria: Categoria[] =[
+  listCategoria: Categoria[] = [
     new Categoria("Frutas"),
     new Categoria("Verduras"),
     new Categoria("Enlatados")
