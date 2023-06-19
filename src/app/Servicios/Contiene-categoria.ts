@@ -17,7 +17,5 @@ export class Contienecategoria {
 
   agregarCategoriaServicio(listCategoria: Categoria){
     this.listCategoria.push(listCategoria);
-    console.log(listCategoria);
   }
-
 }
