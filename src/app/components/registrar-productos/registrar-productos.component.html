@@ -6,12 +6,10 @@
             <div class="row">
                 <div class="col" style="margin: 1%;">
                     <div class="form-group">
-                        <label for="categoriaProducto"> Selección:</label>
+                        <label for="categoriaProducto"> Seleccionar Categoría:</label>
                         <select class="form-select" aria-label="Default select example">
-                            <option selected>Categoría</option>
-                            <option value="1">Frutas</option>
-                            <option value="2">Verduras</option>
-                            <option value="3">Enlatados</option>
+                            <option selected> Seleccionar</option>
+                            <option *ngFor="let categoria of categorias" [value]="categoria.categoria_nombre">{{ categoria.categoria_nombre }}</option>
                         </select>
                     </div><br>
                     <div class="form-group col">
