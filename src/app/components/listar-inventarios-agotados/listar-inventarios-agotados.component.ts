@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Producto } from 'src/app/Models/Producto';
-import { ContieneProductos } from 'src/app/Servicios/contiene-productos';
+import { ContieneProductos } from 'src/app/Servicios/Contiene-productos';
 
 @Component({
   selector: 'app-listar-inventarios-agotados',

@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Categoria } from 'src/app/Models/Categoria';
 import { Producto } from 'src/app/Models/Producto';
 import { Contienecategoria } from 'src/app/Servicios/Contiene-categoria';
-import { ContieneProductos } from 'src/app/Servicios/contiene-productos';
+import { ContieneProductos } from 'src/app/Servicios/Contiene-productos';
 
 @Component({
   selector: 'app-registrar-productos',
