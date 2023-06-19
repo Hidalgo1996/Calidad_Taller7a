@@ -1,31 +1,31 @@
 <div class="listar_inv_produc border-0 shadow-lg" style="padding: 2%;">
-    <!-- Listados de Inventarios -->
-    <h2>Listados de Inventarios</h2>
-    <h3>Por Productos</h3>
-    <table id="inventarioPorProducto" class="table table-striped" style="text-align: center;">
-      <thead class="table-dark">
-        <tr>
-          <th>#</th>
-          <th>Categoría</th>
-          <th>Nombre</th>
-          <th>Marca</th>
-          <th>Peso</th>
-          <th>Precio de Compra</th>
-          <th>Precio de Venta</th>
-          <th>Cantidad en Stock</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let producto of productos let i=index">
-          <th>{{ i + 1 }}</th>
-          <th scope="row">{{ producto.categoria }}</th>
-          <td>{{ producto.nombre_producto }}</td>
-          <td>{{ producto.nombre_marca }}</td>
-          <td>{{ producto.peso }}</td>
-          <td>{{ producto.precio_compra }}</td>
-          <td>{{ producto.precio_venta }}</td>
-          <td>{{ producto.cantidad_stock }}</td>
-        </tr>
-      </tbody>
-    </table>
+  <!-- Listados de Inventarios -->
+  <h2>Listados de Inventarios</h2>
+  <h3>Por Productos</h3>
+  <table id="inventarioPorProducto" class="table table-striped" style="text-align: center;">
+    <thead class="table-dark">
+      <tr>
+        <th>#</th>
+        <th>Categoría</th>
+        <th>Nombre</th>
+        <th>Marca</th>
+        <th>Peso</th>
+        <th>Precio de Compra</th>
+        <th>Precio de Venta</th>
+        <th>Cantidad en Stock</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos let i=index">
+        <th>{{ i + 1 }}</th>
+        <th scope="row">{{ producto.categoria }}</th>
+        <td>{{ producto.nombre_producto }}</td>
+        <td>{{ producto.nombre_marca }}</td>
+        <td>{{ producto.peso }}</td>
+        <td>{{ producto.precio_compra }}</td>
+        <td>{{ producto.precio_venta }}</td>
+        <td>{{ producto.cantidad_stock }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
