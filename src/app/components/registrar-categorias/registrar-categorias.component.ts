@@ -25,6 +25,7 @@ export class RegistrarCategoriasComponent implements OnInit {
     if (this.form.valid) {
       let micategoria = new Categoria(this.form.value.categoria);
       this.recibeCategoriaServices.agregarCategoriaServicio(micategoria);
+      alert("Se ha registrado la categoría con éxito.");
       this.form.reset(); // Restablece el formulario después de agregar una categoría
     }
   }  

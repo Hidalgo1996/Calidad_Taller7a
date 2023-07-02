@@ -33,7 +33,7 @@ export class RegistrarVentasComponent implements OnInit{
     this.form = new FormGroup({
       categoria: new FormControl(''),
       producto: new FormControl(''),
-      cantidad: new FormControl(''),
+      cantidad: new FormControl('', [Validators.required, Validators.min(1)]), // Establecer validador para cantidad
       cantidadCompra: new FormControl({ value: '', disabled: true })
     });
   }
@@ -67,6 +67,16 @@ export class RegistrarVentasComponent implements OnInit{
       this.form.get('cantidadCompra')?.setValue(precioTotal.toFixed(2));
     } else {
       this.form.get('cantidadCompra')?.setValue('');
+    }
+  }
+
+  agregarVentas() {
+    if (this.form.valid) {
+      // Mostrar mensaje
+    alert("La venta se ha registrado con éxito.");
+
+    // Restablece los campos del formulario
+    this.form.reset();
     }
   }
 

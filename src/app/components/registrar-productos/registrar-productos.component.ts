@@ -61,7 +61,8 @@ export class RegistrarProductosComponent implements OnInit{
 
       let nuevoProducto = new Producto(categoria, nombre_producto, nombre_marca, peso, precio_compra, precio_venta, cantidad_stock);
       this.reciveProductoServices.agregaProductosServicio(nuevoProducto);
-  
+      
+      alert("Se ha registrado el producto con éxito.");
       // Restablece los campos del formulario
       this.form.reset();
     }

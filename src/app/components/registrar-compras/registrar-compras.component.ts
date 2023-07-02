@@ -10,21 +10,21 @@ import { ContieneProductos } from 'src/app/Servicios/Contiene-productos';
   templateUrl: './registrar-compras.component.html',
   styleUrls: ['./registrar-compras.component.css']
 })
-export class RegistrarComprasComponent implements OnInit{
+export class RegistrarComprasComponent implements OnInit {
   form!: FormGroup;
-  categoria="";
-  nombre_producto="";
-  nombre_marca="";
-  peso="";
-  precio_compra="";
-  precio_venta="";
-  cantidad_stock="";
+  categoria = "";
+  nombre_producto = "";
+  nombre_marca = "";
+  peso = "";
+  precio_compra = "";
+  precio_venta = "";
+  cantidad_stock = "";
   categorias: Categoria[] = [];
   productos: Producto[] = [];
   productosFiltrados: Producto[] = [];
 
   //Servicio
-  constructor(private recibeCategoriaServices: Contienecategoria, private reciveProductoServices: ContieneProductos) {}
+  constructor(private recibeCategoriaServices: Contienecategoria, private reciveProductoServices: ContieneProductos) { }
 
   ngOnInit(): void {
     this.categorias = this.recibeCategoriaServices.listCategoria;
@@ -33,7 +33,8 @@ export class RegistrarComprasComponent implements OnInit{
     this.form = new FormGroup({
       categoria: new FormControl(''),
       producto: new FormControl(''),
-      cantidad: new FormControl(''),
+      proveedor: new FormControl(''),
+      cantidad: new FormControl('', [Validators.required, Validators.min(1)]), // Establecer validador para cantidad
       cantidadCompra: new FormControl({ value: '', disabled: true })
     });
   }
@@ -61,12 +62,23 @@ export class RegistrarComprasComponent implements OnInit{
   calcularPrecioTotal() {
     const cantidad = this.form.get('cantidad')?.value;
     const productoSeleccionado = this.productos.find(producto => producto.nombre_producto === this.form.get('producto')?.value);
-  
+
     if (cantidad && productoSeleccionado) {
       const precioTotal = cantidad * productoSeleccionado.precio_compra;
       this.form.get('cantidadCompra')?.setValue(precioTotal.toFixed(2));
     } else {
       this.form.get('cantidadCompra')?.setValue('');
+    }
+  }
+
+  agregarCompras() {
+
+    if (this.form.valid) {
+      // Mostrar mensaje
+    alert("La compra se ha registrado con éxito.");
+
+    // Restablece los campos del formulario
+    this.form.reset();
     }
   }
 
