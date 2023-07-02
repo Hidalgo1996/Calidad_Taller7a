@@ -26,14 +26,17 @@
                         <label for="peso">Peso:</label>
                         <input type="text" class="form-control" id="peso" placeholder="Ingrese el peso del producto" formControlName="peso">
                     </div><br>
-                    <div class="form-group col">
+                    
+                    <div class="form-group col" [ngClass]="{'invalid-field': !form.controls['precio_compra'].valid || !form.controls['precio_venta'].valid}">
                         <label for="precioCompra">Precio de Compra ($):</label>
                         <input type="text" class="form-control" id="precioCompra" placeholder="Ingrese el precio de compra" formControlName="precio_compra">
-                    </div><br>
-                    <div class="form-group col">
+                      </div><br>
+                      <div class="form-group col" [ngClass]="{'invalid-field': !form.controls['precio_compra'].valid || !form.controls['precio_venta'].valid}">
                         <label for="precioVenta">Precio de Venta ($):</label>
                         <input type="text" class="form-control" id="precioVenta" placeholder="Ingrese el precio de venta" formControlName="precio_venta">
-                    </div><br>
+                      </div><br>
+                      
+                      
                     <div class="form-group col">
                         <label for="cantidad_stock">Cantidad en Stock:</label>
                         <input type="text" class="form-control" id="cantidad_stock" placeholder="Ingrese la cantidad en stock" formControlName="cantidad_stock">

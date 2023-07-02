@@ -51,6 +51,14 @@ export class RegistrarProductosComponent implements OnInit{
       let precio_venta = parseFloat(this.form.get('precio_venta')?.value);
       let cantidad_stock = parseInt(this.form.get('cantidad_stock')?.value);
   
+      let precioCompra = parseFloat(this.form.get('precio_compra')?.value);
+      let precioVenta = parseFloat(this.form.get('precio_venta')?.value);
+      if (precioCompra >= precioVenta) {
+        // Mostrar mensaje de error
+        alert("El precio de compra debe ser menor que el precio de venta.");
+        return; // Detener la ejecución del método
+      }
+
       let nuevoProducto = new Producto(categoria, nombre_producto, nombre_marca, peso, precio_compra, precio_venta, cantidad_stock);
       this.reciveProductoServices.agregaProductosServicio(nuevoProducto);
   
