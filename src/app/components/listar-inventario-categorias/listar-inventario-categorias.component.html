@@ -7,13 +7,18 @@
             <tr>
                 <th scope="col"> #</th>
                 <th scope="col"> Categoría</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
             <!-- Filas de productos obtenidos de la base de datos -->
             <tr *ngFor="let categoria of listCategoria let i=index">
-                <th>{{ i + 1 }}</th>
-                <th>{{categoria.categoria_nombre}}</th>
+                <th scope="row">{{ i + 1 }}</th>
+                <th scope="row">{{categoria.categoria_nombre}}</th>
+                <th>
+                    <i class="bi bi-pencil-square"></i>
+                    <i class="bi bi-file-earmark-x-fill"></i>
+                </th>
             </tr>
         </tbody>
     </table>
